@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="{{ MEDIA_URL }}bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="{{ MEDIA_URL }}bower_components/powerange/dist/powerange.css"/>
+    <link rel="stylesheet" href="{{ STATIC_URL }}main/css/app.css"/>
+</head>
+<body ng-app="app">
+    <div class="container" ng-controller="MainCtlr">
+
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <div class="cross">
+                    <div class="cross-top"><powerange vertical="true" ng-model="current.leader"></powerange></div>
+                    <div class="horizontal">
+                        <div class="cross-left"><powerange invert="true" ng-model="current.goodsense"></powerange></div>
+                        <div class="cross-right"><powerange ng-model="current.freeart"></powerange></div>
+                    </div>
+                    <div class="cross-bottom"><powerange vertical="true" invert="true" ng-model="current.trust"></powerange></div>
+                    <button class="btn btn-info center-block" ng-disabled="process" ng-click="post_stat(current)">отправить</button>
+                </div>
+
+                <span class="label label-danger">Лидерство</span>
+                <span class="label label-primary">Свобода творчества</span>
+                <span class="label label-success">Доверие</span>
+                <span class="label label-warning">Здравый смысл</span>
+
+                <div class="alert alert-success" ng-if="success">
+                    данные сохранены
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12 result" ng-if="total">
+                <div class="cross">
+                    <div class="cross-top"><powerange vertical="true" ng-model="total.leader" disabled="true"></powerange></div>
+                    <div class="horizontal">
+                        <div class="cross-left"><powerange invert="true" ng-model="total.goodsense" disabled="true"></powerange></div>
+                        <div class="cross-right"><powerange ng-model="total.freeart" disabled="true"></powerange></div>
+                    </div>
+                    <div class="cross-bottom"><powerange vertical="true" invert="true" ng-model="total.trust" disabled="true"></powerange></div>
+                </div>
+                {% verbatim %}
+                <p class="bg-info">кол-во человек: {{ total.count }}</p>
+                {% endverbatim %}
+            </div>
+        </div>
+    </div>
+    <script src="{{ MEDIA_URL }}bower_components/jquery/dist/jquery.js"></script>
+    <script src="{{ MEDIA_URL }}bower_components/angular/angular.js"></script>
+    <script src="{{ MEDIA_URL }}bower_components/powerange/dist/powerange.js"></script>
+    <script src="{% static "main/js/app.js" %}"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+.cross {
+  width: 555px;
+  height: 555px;
+  position: relative;
+}
+.cross .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.cross .horizontal {
+  height: 30px;
+}
+.cross .cross-top,
+.cross .cross-bottom {
+  width: 30px;
+  height: 262.5px;
+  margin: 0 auto;
+  padding-left: 13px;
+}
+.cross .cross-top .range-quantity {
+  background: #ea5e5e;
+}
+.cross .cross-bottom .range-bar.invert {
+  background: #77d75d;
+}
+.cross .cross-left,
+.cross .cross-right {
+  width: 262.5px;
+  height: 30px;
+  padding-top: 13px;
+}
+.cross .cross-left {
+  float: left;
+}
+.cross .cross-left .range-bar.invert {
+  background: #ffe257;
+}
+.cross .cross-right {
+  float: right;
+}
+.cross .cross-right .range-quantity {
+  background: #4d96e8;
+}
+.invert .range-quantity {
+  background-color: #a9acb1;
+}
+.result p {
+  padding: 15px;
+}

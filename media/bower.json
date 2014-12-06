@@ -1,0 +1,27 @@
+{
+  "name": "cross",
+  "version": "0.0.0",
+  "authors": [
+    "beholderrk <behoderrk@gmail.com>"
+  ],
+  "description": "cross app",
+  "keywords": [
+    "cross",
+    "app"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "angular": "~1.3.5",
+    "bootstrap": "~3.3.1",
+    "powerange": "~0.0.2"
+  }
+}

@@ -1,0 +1,61 @@
+@crossdimension: 555px;
+@linewidth: 30px;
+@lineheight: @crossdimension/2 - @linewidth/2;
+@linepadding: @linewidth/2 - 2px;
+
+.cross {
+  width: @crossdimension;
+  height: @crossdimension;
+  position: relative;
+
+  .btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .horizontal {
+    height: @linewidth;
+  }
+
+  .cross-top, .cross-bottom { width: @linewidth; height: @lineheight; margin: 0 auto; padding-left: @linepadding; }
+  .cross-top {
+    .range-quantity {
+      background: #ea5e5e;
+    };
+  }
+  .cross-bottom {
+    .range-bar.invert {
+      background: #77d75d;
+    };
+
+  }
+  .cross-left, .cross-right { width: @lineheight; height: @linewidth; padding-top: @linepadding;}
+  .cross-left {
+    float: left;
+    .range-bar.invert {
+      background: #ffe257;
+    };
+  }
+  .cross-right {
+    float: right;
+    .range-quantity {
+      background: #4d96e8;
+    };
+  }
+}
+
+.invert{
+  .range-quantity {
+    background-color: #a9acb1;
+  }
+}
+
+//.range-bar.invert {
+//  background-color: #017afd;
+//}
+
+
+.result {
+  p { padding: 15px; }
+}

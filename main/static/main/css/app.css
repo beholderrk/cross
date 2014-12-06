@@ -8,6 +8,26 @@
   bottom: 0;
   left: 0;
 }
+.cross .label-danger {
+  position: absolute;
+  top: 10px;
+  left: 290.5px;
+}
+.cross .label-primary {
+  position: absolute;
+  bottom: 290.5px;
+  right: 10px;
+}
+.cross .label-success {
+  position: absolute;
+  bottom: 10px;
+  left: 290.5px;
+}
+.cross .label-warning {
+  position: absolute;
+  bottom: 290.5px;
+  left: 10px;
+}
 .cross .horizontal {
   height: 30px;
 }

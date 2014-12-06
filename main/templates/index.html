@@ -14,6 +14,8 @@
 
         <div class="row">
             <div class="col-md-6 col-xs-12">
+                <h4>Ваш выбор<br/>
+                    <small>Оцените проявление ценностей в компании сегодня</small></h4>
                 <div class="cross">
                     <div class="cross-top"><powerange vertical="true" ng-model="current.leader"></powerange></div>
                     <div class="horizontal">
@@ -22,18 +24,18 @@
                     </div>
                     <div class="cross-bottom"><powerange vertical="true" invert="true" ng-model="current.trust"></powerange></div>
                     <button class="btn btn-info center-block" ng-disabled="process" ng-click="post_stat(current)">отправить</button>
+                    <span class="label label-danger">Лидерство</span>
+                    <span class="label label-primary">Свобода творчества</span>
+                    <span class="label label-success">Доверие</span>
+                    <span class="label label-warning">Здравый смысл</span>
                 </div>
-
-                <span class="label label-danger">Лидерство</span>
-                <span class="label label-primary">Свобода творчества</span>
-                <span class="label label-success">Доверие</span>
-                <span class="label label-warning">Здравый смысл</span>
-
                 <div class="alert alert-success" ng-if="success">
                     данные сохранены
                 </div>
             </div>
             <div class="col-md-6 col-xs-12 result" ng-if="total">
+                <h4>Статистика за день<br/>
+                    <small>усредненные значния показателей за день</small></h4>
                 <div class="cross">
                     <div class="cross-top"><powerange vertical="true" ng-model="total.leader" disabled="true"></powerange></div>
                     <div class="horizontal">
@@ -41,6 +43,10 @@
                         <div class="cross-right"><powerange ng-model="total.freeart" disabled="true"></powerange></div>
                     </div>
                     <div class="cross-bottom"><powerange vertical="true" invert="true" ng-model="total.trust" disabled="true"></powerange></div>
+                    <span class="label label-danger">Лидерство</span>
+                    <span class="label label-primary">Свобода творчества</span>
+                    <span class="label label-success">Доверие</span>
+                    <span class="label label-warning">Здравый смысл</span>
                 </div>
                 {% verbatim %}
                 <p class="bg-info">кол-во человек: {{ total.count }}</p>

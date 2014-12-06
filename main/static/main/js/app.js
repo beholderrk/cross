@@ -14,6 +14,9 @@ var app = angular.module('app', [])
             $http.post('/stat/post/', current)
                 .then(function (resp) {
                     $scope.success = resp.data.success;
+                    if($scope.success){
+                        localStorage.setItem('voted', 'true')
+                    }
                     $scope.$emit('update.stat');
                     $timeout(function () {
                         $scope.success = false;

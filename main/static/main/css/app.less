@@ -3,6 +3,7 @@
 @lineheight: @crossdimension/2 - @linewidth/2;
 @linepadding: @linewidth/2 - 2px;
 
+
 .cross {
   width: @crossdimension;
   height: @crossdimension;
@@ -12,6 +13,30 @@
     position: absolute;
     bottom: 0;
     left: 0;
+  }
+
+  .label-danger {
+    position: absolute;
+    top: 10px;
+    left: @crossdimension/2 + @linepadding;
+  }
+
+  .label-primary {
+    position: absolute;
+    bottom: @crossdimension/2 + @linepadding;
+    right: 10px;
+  }
+
+  .label-success {
+    position: absolute;
+    bottom: 10px;
+    left: @crossdimension/2 + @linepadding;
+  }
+
+  .label-warning {
+    position: absolute;
+    bottom: @crossdimension/2 + @linepadding;
+    left: 10px;
   }
 
   .horizontal {

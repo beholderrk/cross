@@ -48,4 +48,8 @@ def get_stat(request):
     data = Stat.objects.today().aggregate(
         leader=models.Avg('leader'), goodsense=models.Avg('goodsense'),
         freeart=models.Avg('freeart'), trust=models.Avg('trust'), count=models.Count('id'))
+    # data['leader'] = round(data['leader'])
+    # data['goodsense'] = round(data['goodsense'])
+    # data['freeart'] = round(data['freeart'])
+    # data['trust'] = round(data['trust'])
     return JsonResponse(data)
